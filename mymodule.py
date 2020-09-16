@@ -35,4 +35,7 @@ def procArray():
 https://taskcode.ru/array/reverse
 """
 https://docs.google.com/presentation/d/e/2PACX-1vShT9L0JJLouWWMs3ZL8hAdu5vjtH4CPyuIh3pPMeFePvSPev0ZewVp8BMLtEXf7pzSKxZhduBnNvTn/pub?start=false&loop=false&delayms=3000
+    ============
+    
+    https://docs.google.com/presentation/d/e/2PACX-1vQtPaFbUzBsBfIKCfR8Ao8BB8Q6eDq9N9TKjiEj3TEn_qE5eNRIYz21s5isZ2uuy-RcRTZgmJk82FfV/pub?start=false&loop=false&delayms=3000
 
