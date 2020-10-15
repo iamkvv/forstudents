@@ -10,11 +10,11 @@ def race(turtles):
     trt= turtle.Turtle()
     scr= turtle.Screen()
 
-    g_width,g_height= setgame(turtles,scr,trt)
+    g_width,g_height= setgame(turtles,scr,trt) #разметка "стадиона"
     
-    trts = setturtles(turtles,g_width,g_height)
+    trts = setturtles(turtles,g_width,g_height) #создание и размещение черепах
     
-    run(trts,trt,g_width)
+    run(trts,trt,g_width) #запуск гонки
 
     scr.mainloop()
 
