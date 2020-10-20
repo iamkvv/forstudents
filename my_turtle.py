@@ -1,7 +1,7 @@
 from random import randint,choice
 import turtle
 
-def race(turtles=5):
+def race(turtles):
     '''
     Главная функция. Создает объекты черепахи и окна (Turtle и Screen)
     и выполняет остальные функции
@@ -162,5 +162,5 @@ def result(trts):
 #-------------------------------------            
 
 if __name__ == "__main__":
-    race()
+    race(4)
 
