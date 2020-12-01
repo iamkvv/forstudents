@@ -108,8 +108,11 @@ def ff3(a,*,b,c):
     #ff3(1,3,4) !!!BAD
 
 #============================
-#python  get-pip.py
 #pip -V
+#python  get-pip.py
+#python -m pip install --upgrade pip
+#pip install XlsxWriter 
+
 def excel():
     import xlsxwriter
     # открываем новый файл на запись
