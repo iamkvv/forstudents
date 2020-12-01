@@ -106,3 +106,30 @@ def ff3(a,*,b,c):
     print(a)
     #ff3(1,b=3,c=4) !!!OK
     #ff3(1,3,4) !!!BAD
+
+#============================
+#python  get-pip.py
+#pip -V
+def excel():
+    import xlsxwriter
+    # открываем новый файл на запись
+    workbook = xlsxwriter.Workbook('hello.xlsx')
+    # создаем там "лист"
+    worksheet = workbook.add_worksheet()
+    # в ячейку A1 пишем текст
+    worksheet.write('A1', 'Hello world')
+    # сохраняем и закрываем
+    workbook.close()
+    
+    
+    ''' Пишем в файл в цикле
+    for item in content :     
+        sheet.write(row, column, item)     
+        row += 1  
+    ''''
+    
+    
+    
+
+
+    
