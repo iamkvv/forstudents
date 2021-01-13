@@ -68,3 +68,4 @@ def memoize(func):
 def multiply(a,b):
     return a*b
 
+## https://tirinox.ru/python-decorators/
