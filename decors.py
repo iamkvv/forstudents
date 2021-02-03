@@ -1,3 +1,35 @@
+def memoize(func):
+    cache={}
+    def wrapper(*args):
+        if args in cache:
+            print('!!!')
+            return cache[args]
+        
+        res = func(*args)
+        cache[args] = res
+
+        with open ('log.txt', "a") as f:
+            f.write(str(res) + "\n")
+
+        
+        return res
+
+    return wrapper
+
+
+@memoize
+def adder(a,b,c):
+    return a+b+c
+
+
+r = adder(22,32,3)
+print(r)
+
+
+
+
+
+
 '''
 >>> a, b, c = map(int, input("vvod ").split())
 vvod 3 4 5
