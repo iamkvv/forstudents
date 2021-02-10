@@ -1,8 +1,0 @@
-тест 1:
-https://docs.google.com/forms/d/e/1FAIpQLSfq29t2jOlunP7NCQwCanPMT51jcucRm6ait2Ies6Xog2Gtjg/viewform?usp=sf_link
-
-тест 2:
-https://docs.google.com/forms/d/e/1FAIpQLScp-2IcySFZOJfg_cvognq4NECEGaHbSLQfSGTjjWrT-XHoow/viewform?usp=sf_link
-
-
-https://tproger.ru/video/data-science-dlja-nachinajushhih-12-proektov-na-python-za-3-chasa/
