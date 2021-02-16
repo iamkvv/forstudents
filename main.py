@@ -1,5 +1,6 @@
 from decors import control_input,memoize1,logger
 import sys
+import time
 import importlib
 
 @control_input
@@ -9,6 +10,7 @@ def InPut(message):
 @logger
 @memoize1
 def Calc(n1,n2,sign):
+    s1 = time.perf_counter_ns() 
     OPERATORS = {
         '+': float.__add__, 
         '-': float.__sub__,
@@ -17,7 +19,9 @@ def Calc(n1,n2,sign):
         '%': float.__mod__,
         '^': float.__pow__,
     }
-    return OPERATORS[sign](n1,n2)
+    res = OPERATORS[sign](n1,n2)
+    f1 = time.perf_counter_ns()
+    print('opers',f1 - s1)
 '''
     if sign == "+":   return n1+n2
     elif sign == "-": return n1-n2
