@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>{{ title }}.</h2>
+
+<div>
+    <form action="/race" method="post">
+        <input type="text" name="cars">
+        <input type="text" name="races">
+        <input type="submit" value="Старт">
+    </form>
+</div>
+
+
+{% if method == "POST" %}
+  {{ race.to_html(classes=['table','table-condensed', 'table-striped', 'table-bordered']) | safe }}
+  {{ race_html | safe}}
+{% endif %}
+
+{%endblock%}
+
