@@ -2,41 +2,10 @@
 Routes and views for the flask application.
 """
 
-from datetime import datetime
-from flask import render_template,jsonify
+from flask import render_template
 from FlaskWebProject3 import  app
-from flask import send_from_directory,request
-from my_class1 import Myclass
-
+from flask import request
 from race import Drom,SportCar
-
-from flask_mysqldb import MySQL
-
-mysql = MySQL(app)
-
-@app.route('/')
-#@app.route('/myhome')
-def home():
-    """Renders the home page."""
-     #https://github.com/alexferl/flask-mysqldb
-    #lst =[1,2,3]
-    #cur = mysql.connection.cursor()
-    #cur.execute('''SELECT * FROM TestJson''')
-    #rv = cur.fetchall()
-    #srv = jsonify({"res":rv})
-
-    return render_template(
-        'index.html',
-        title='Home Page')
-
-
-    #return render_template(
-    #    'index.html',
-    #    title='Home Page',
-    #    res= srv.json['res'],
-    #    year=srv, ##datetime.now().year,
-    #    tst =lst
-    
 
 @app.route('/race', methods=['post', 'get'])
 def race():
@@ -75,60 +44,6 @@ def race():
         race = drom.df_empty if drom else '',
         race_html = race_html if race_html else '')
 
-@app.route('/contact')
-def contact():
-    """Renders the contact page."""
-    return render_template(
-        'contact.html',
-        title='Contact',
-        year=datetime.now().year,
-        message='Your contact page.'
-    )
-
-@app.route('/about')
-def about():
-    """Renders the about page."""
-    return render_template(
-        'about.html',
-        title='About',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
-
-
-@app.route('/pyth')
-def pyth():
-    """Renders the python page."""
-    return render_template(
-        'python.html',
-        title='PythonTest',
-        year=datetime.now().year,
-        message="Тестируем Pyodide"
-    )
-
-@app.route("/myhome")
-def base():
-    return send_from_directory('client/public/', 'index.html') #public
-
-@app.route("/second")
-def basesecond():
-    return send_from_directory('client/dist/second', 'index.html') #public
-
-
-
-@app.route("/<path:path>")
-def svelte_client(path):
-    return send_from_directory('client/public', path) #public
-
-#https://www.rithmschool.com/courses/flask-fundamentals/templating-with-jinja2
-@app.route('/data')
-def print_name():
-    cl =Myclass('111','222')
-    cl.test()
-
-    first = request.args.get('first')
-    last = request.args.get('last')
-    return f"You put {first} {last} {cl.one} -- {cl.two}"
 
 
 def highlight_max(s):
